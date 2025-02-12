@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spinning GIF with Button</title>
+  <style>
+    /* Importing a shiny gradient font */
+   
+    
+    body {
+      font-family: 'Baloo 2', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: hsl(0, 10%, 4%);
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 5em;
+      background: linear-gradient(to right, #c72727, #4c3ea7, #b8171a);
+      font-family: 'Times New Roman', Times, serif;
+      color: transparent;
+      background-clip: text;
+      animation: shine 5s infinite linear;
+    }
+
+    @keyframes shine {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .spinner-container {
+      position: relative;
+      width: 200px;
+      height: 300px;
+      margin: 20px;
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .spinner {
+      width: 100%;
+      height: 100%;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .pop {
+      transform: scale(2);
+    }
+
+    button {
+      padding: 15px 30px;
+      background-color: #ff7e5f;
+      color: white;
+      font-size: 1.2em;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    button:hover {
+      background-color: #feb47b;
+    }
+  </style>
+</head>
+<body>
+  <h1>THAYUBIES ASSS</h1>
+  <div class="spinner-container">
+    <img src="ookk.gif" alt="Spinning GIF" class="spinner" id="spinner">
+  </div>
+  <button id="popButton">:3</button>
+
+  <audio id="song" src="oo_ee_a_e_a.mp3"></audio>
+
+  <script>
+    const button = document.getElementById("popButton");
+    const spinner = document.getElementById("spinner");
+    const song = document.getElementById("song");
+
+    button.addEventListener("click", () => {
+      spinner.classList.toggle("pop");
+      song.play();
+    });
+  </script>
+</body>
+</html>
